@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+a {
+    color: #F5F7F8;
+}
+
+.about-box {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 0;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        & li {
+            background: rgba($primaryColor, 0.8);
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 1.2rem;
+            color: #F5F7F8;
+            max-width: 450px;
+            width: 100%;
+
+            & img {
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+                margin: 0 .5rem;
+                cursor: pointer;
+
+                &:hover {
+                    animation: blink 1.5s .5s infinite;
+                }
+            }
+        }
+
+    }
+
+    & .profile {
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 3rem 0 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
