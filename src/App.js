@@ -3,7 +3,8 @@ import { useEffect, useRef } from 'react';
 import './App.scss';
 import useFullScroll from './hooks/useFullScroll';
 import BottomDesc from './components/BottomDesc/BottomDesc';
-import About from './components/about/About';
+import About from './components/About/About';
+import Experience from './components/Experience/Experience';
 
 function useHighlightRestart(currentSection) {
   const highlightRef = useRef(null);
@@ -43,7 +44,8 @@ export default function App() {
       </section>
       {/* page3 */}
       <section className='section about'>
-        <p>SKIll</p>
+        <p>Experience</p>
+        <Experience />
       </section>
 
       <section className='section'>
