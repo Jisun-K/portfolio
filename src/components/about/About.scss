@@ -24,7 +24,7 @@ a {
             padding: 1rem;
             border-radius: 1.2rem;
             color: #F5F7F8;
-            max-width: 450px;
+            max-width: 40rem;
             width: 100%;
 
             & img {
@@ -42,10 +42,20 @@ a {
 
     }
 
-    & .profile {
-        height: 200px;
-        border-radius: 50%;
+    & .profile-box {
         margin: 0 3rem 0 0;
+
+        & .profile {
+            height: 17rem;
+            border-radius: 50%;
+        }
+
+        & p {
+            // text-align: center;
+            font-size: .7rem;
+            line-height: 1.5;
+        }
+
     }
 }
 
