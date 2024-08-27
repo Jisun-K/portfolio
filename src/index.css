@@ -23,3 +23,7 @@ code {
   font-family: '양진체',
     monospace;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

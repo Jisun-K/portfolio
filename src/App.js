@@ -39,12 +39,11 @@ export default function App() {
       </section>
       {/* page2 */}
       <section className='section about'>
-        <p>ABOUT</p>
+        <p className='section-name'>ABOUT</p>
         <About />
       </section>
       {/* page3 */}
-      <section className='section about'>
-        <p>Experience</p>
+      <section className='section exp'>
         <Experience />
       </section>
 

@@ -5,11 +5,14 @@ a {
 }
 
 .about-box {
-    width: 75%;
+    // width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3rem 0 0;
+    // background: $accentColor;
+    border-radius: 30px;
+    padding: 1rem 1.2rem;
 
     ul {
         display: flex;
@@ -24,8 +27,7 @@ a {
             padding: 1rem;
             border-radius: 1.2rem;
             color: #F5F7F8;
-            max-width: 40rem;
-            width: 100%;
+            width: 16rem;
 
             & img {
                 width: 24px;
@@ -48,6 +50,7 @@ a {
         & .profile {
             height: 17rem;
             border-radius: 50%;
+            background: white;
         }
 
         & p {

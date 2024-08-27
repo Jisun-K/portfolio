@@ -1,1 +1,54 @@
 @import '../../styles/variables';
+
+
+.experience-box {
+    max-height: 700px;
+    overflow: scroll;
+}
+
+.experience-box,
+.exp-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.exp-wrap {
+    line-height: 1.3;
+    align-items: flex-start;
+    padding: 1rem;
+    font-family: 'GmarketSansMedium';
+
+    & .exp-icon {
+        width: 24px;
+        height: 24px;
+        background: $accentColor;
+        border-radius: 50%;
+        padding: 3px;
+        margin: 0 .625rem 0 0;
+    }
+
+    & .exp-desc {
+        border-left: solid $accentColor 3px;
+        padding: 0 0 0 .625rem;
+        font-size: .825rem;
+
+        & p {
+            margin: .625rem 0;
+        }
+
+        & .exp-m-bold {
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        & .exp-sm-bold {
+            font-weight: 800;
+        }
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .experience-box {
+        display: block;
+    }
+}

@@ -14,10 +14,20 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    width: 80%;
+    margin: 0 auto;
     // @at-root &.about {
     //     justify-content: flex-end;
     // }
+
+    .section-name {
+        font-weight: 700;
+        font-family: 'GmarketSansMedium';
+        font-weight: 800;
+        font-size: 2.5rem;
+        border-bottom: solid 5px $accentColor;
+        width: 100%;
+    }
 }
 
 .main {
@@ -48,6 +58,7 @@
             opacity: .5;
             display: inline-block;
             height: 100%;
+            top: 0;
             left: 0;
             z-index: -1;
 

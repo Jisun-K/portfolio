@@ -5,7 +5,7 @@ import classNames from 'classnames';
 export default function BottomDesc({ isShow }) {
     const [hasScrolled, setHasScrolled] = useState(false); // 스크롤 여부를 추적하는 상태
 
-    useEffect(() => {
+    useEffect((event) => {
         const handleScroll = () => {
             setHasScrolled(true); // 스크롤 이벤트 발생 시 상태 업데이트
         };
