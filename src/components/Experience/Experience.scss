@@ -12,6 +12,10 @@
     flex-direction: row;
 }
 
+.experience-type-container {
+    width: 50%;
+}
+
 .exp-wrap {
     line-height: 1.3;
     align-items: flex-start;
@@ -44,11 +48,24 @@
         & .exp-sm-bold {
             font-weight: 800;
         }
+
+        & .pointer {
+            cursor: pointer;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+
     }
 }
 
 @media screen and (max-width: 890px) {
     .experience-box {
         display: block;
+
+        & .experience-type-container {
+            width: 100%;
+        }
     }
 }

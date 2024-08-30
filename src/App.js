@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.scss';
 import useFullScroll from './hooks/useFullScroll';
 import BottomDesc from './components/BottomDesc/BottomDesc';
@@ -23,10 +23,25 @@ function useHighlightRestart(currentSection) {
 
 
 export default function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const currentSection = useFullScroll();
   const highlightRef = useHighlightRestart(currentSection);
 
   const isShowBottom = currentSection === 1 || currentSection === 2;
+
+  const clickProject = (id) => {
+    if (id === null || id === '') {
+      return;
+    }
+    setSelectedProject(id);
+  };
+
+  useEffect(() => {
+    if (selectedProject) {
+      alert(selectedProject);
+    }
+  }, [selectedProject]);
 
   return (
     <div className='App'>
@@ -44,7 +59,7 @@ export default function App() {
       </section>
       {/* page3 */}
       <section className='section exp'>
-        <Experience />
+        <Experience clikedProject={clickProject} />
       </section>
 
       <section className='section'>
