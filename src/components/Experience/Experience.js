@@ -100,7 +100,7 @@ export default function Experience({ clikedProject }) {
                                 <ul>
                                     {type.project.map((item, idx) => (
                                         <li key={idx}>
-                                            <p onClick={() => clikedProject(item.id)} className={classNames('exp-sm-bold', { 'pointer': item.id.length > 0 })}>{item.name}</p>
+                                            <p onClick={() => clikedProject(item)} className={classNames('exp-sm-bold', { 'pointer': item.id.length > 0 })}>{item.name}</p>
                                             <p>{item.contents}</p>
                                         </li>
                                     ))}

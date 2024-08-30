@@ -5,6 +5,7 @@ import useFullScroll from './hooks/useFullScroll';
 import BottomDesc from './components/BottomDesc/BottomDesc';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
+import Project from './components/Project/Project';
 
 function useHighlightRestart(currentSection) {
   const highlightRef = useRef(null);
@@ -30,14 +31,20 @@ export default function App() {
 
   const isShowBottom = currentSection === 1 || currentSection === 2;
 
-  const clickProject = (id) => {
-    if (id === null || id === '') {
+  const clickProject = (item) => {
+    if (item.id === null || item.id === '') {
       return;
     }
-    setSelectedProject(id);
+    setSelectedProject(item.id);
   };
 
   useEffect(() => {
+    // 컴포넌트가 마운트될 때 이전 상태를 확인하거나 초기 상태를 설정할 수 있습니다.
+    // 그러나, 일반적으로 상태는 리로드 시 초기화됩니다.
+  }, []);
+
+  useEffect(() => {
+    setSelectedProject('');
     if (selectedProject) {
       alert(selectedProject);
     }
@@ -62,7 +69,8 @@ export default function App() {
         <Experience clikedProject={clickProject} />
       </section>
 
-      <section className='section'>
+      <section className='section project'>
+        <Project id={selectedProject} />
       </section>
 
       <BottomDesc isShow={isShowBottom} />
