@@ -24,18 +24,23 @@ function useHighlightRestart(currentSection) {
 
 
 export default function App() {
+  // exp 에서 클릭한 프로젝트 값 {}
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const currentSection = useFullScroll();
+  // 스크롤 훅
+  const currentSection = useFullScroll(selectedProject ? 3 : undefined);
+  //  main 하이라이트 효과
   const highlightRef = useHighlightRestart(currentSection);
 
+  // bottom desc 여부
   const isShowBottom = currentSection === 1 || currentSection === 2;
 
   const clickProject = (item) => {
     if (item.id === null || item.id === '') {
       return;
     }
-    setSelectedProject(item.id);
+
+    setSelectedProject(item);
   };
 
   useEffect(() => {
@@ -44,10 +49,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    setSelectedProject('');
-    if (selectedProject) {
-      alert(selectedProject);
-    }
+    setSelectedProject(null);
   }, [selectedProject]);
 
   return (
@@ -70,11 +72,10 @@ export default function App() {
       </section>
 
       <section className='section project'>
-        <Project id={selectedProject} />
+        <Project item={selectedProject} />
       </section>
 
       <BottomDesc isShow={isShowBottom} />
-      {/* {isShowBottom && <BottomDesc />} */}
     </div>
   )
 }

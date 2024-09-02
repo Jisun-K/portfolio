@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function useFullScroll() {
+export default function useFullScroll(controllPage) {
     const [currentSection, setCurrentSection] = useState(0);
 
     useEffect(() => {
@@ -32,11 +32,19 @@ export default function useFullScroll() {
 
         window.addEventListener('wheel', handleScroll, { passive: false });
 
+
+        // Handle controllPage change
+        if (controllPage !== undefined && controllPage !== currentSection) {
+            setCurrentSection(controllPage);
+            scrollToSection(controllPage);
+        }
+
+
         // // Cleanup on component unmount
         return () => {
             window.removeEventListener('wheel', handleScroll);
         };
-    }, [currentSection]);
+    }, [currentSection, controllPage]);
 
     return currentSection;
 }

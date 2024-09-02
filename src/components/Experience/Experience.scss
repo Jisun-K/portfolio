@@ -34,14 +34,15 @@
     & .exp-desc {
         border-left: solid $accentColor 3px;
         padding: 0 0 0 .625rem;
-        font-size: .825rem;
+        font-size: 1rem;
+        line-height: 1.5;
 
         & p {
             margin: .625rem 0;
         }
 
         & .exp-m-bold {
-            font-size: 1rem;
+            font-size: 1.125rem;
             font-weight: 800;
         }
 
@@ -56,7 +57,6 @@
                 opacity: .5;
             }
         }
-
     }
 }
 

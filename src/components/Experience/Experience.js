@@ -30,7 +30,7 @@ export default function Experience({ clikedProject }) {
                         contents: '',
                     }
                 ],
-                result: '정보처리산업기사 필기 합격(2022.08)'
+                result: '정보처리기사 필기 합격(2024.08)'
             }
         ],
         work: [
